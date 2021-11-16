@@ -1,0 +1,9 @@
+<h1>
+  <%= @restaurant.name %>
+</h1>
+
+<p><%= @restaurant.address %></p>
+<p><%= '🔥' * @restaurant.rating if @restaurant.rating.present? %></p>
+
+<%= link_to 'edit', edit_restaurant_path(@restaurant) %>
+<%= link_to 'delete', restaurant_path(@restaurant), method: :delete, data: { confirm: "You sure you want to delete this restaurant?" } %>

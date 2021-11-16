@@ -1,0 +1,11 @@
+<h1>The Spoon 777</h1>
+
+<ul>
+  <% @restaurants.each do |r| %>
+    <li>
+      <%#= link_to r.name, restaurant_path(id: r.id) %>
+      <%#= link_to r.name, restaurant_path(r) %>
+      <%= link_to r.name, r %>
+    </li>
+  <% end %>
+</ul>
